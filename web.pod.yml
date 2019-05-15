@@ -5,7 +5,6 @@ metadata:
   namespace: pod-web
   labels:
     zone: prod
-    version: 1
 spec:
   containers:
   - name: web-httpd

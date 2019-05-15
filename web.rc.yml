@@ -18,3 +18,5 @@ spec:
         image: doublev20/web-apache:version1
         ports:
         - containerPort: 8080
+
+

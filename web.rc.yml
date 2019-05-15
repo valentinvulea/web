@@ -11,8 +11,7 @@ spec:
     metadata:
       labels:
         app: pod-web
-        zone: prod
-        version: 1
+        zone: prod        
     spec:
       containers:
       - name: web-httpd

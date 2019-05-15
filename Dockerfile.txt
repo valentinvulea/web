@@ -1,6 +1,6 @@
 FROM httpd:latest
 #COPY ./public-html/ /usr/local/apache2/htdocs/
-COPY public-html/ /usr/local/apache2/htdocs/public-html/
+COPY ./htmlapp/ /usr/local/apache/htdocs
 
 #FROM centos:latest
 #MAINTAINER valentin
@@ -9,7 +9,7 @@ COPY public-html/ /usr/local/apache2/htdocs/public-html/
 #COPY index.html /var/www/html/
 CMD [“/usr/sbin/httpd”, “-D”, “FOREGROUND”]
 
-EXPOSE 80
+EXPOSE 80 
 
 
 

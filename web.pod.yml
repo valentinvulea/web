@@ -11,3 +11,8 @@ spec:
     image: doublev20/web-apache:version1
     ports:
     - containerPort: 8080
+  initContainers:
+  - name: web-test
+    image: doublev20/web-apache:version1
+    command: ["apache2" , "-v"]
+   

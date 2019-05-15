@@ -145,7 +145,7 @@ RUN set -eux; \
 # smoke test
 	httpd -v
 
-COPY httpd-foreground /usr/local/bin/
+#COPY httpd-foreground /usr/local/bin/
 
 EXPOSE 80
 CMD ["httpd-foreground"]
@@ -153,8 +153,7 @@ CMD ["httpd-foreground"]
 
 #FROM httpd:latest
 #COPY ./public-html/ /usr/local/apache2/htdocs/
-#ADD ./httpd-custom.conf /usr/local/apache2/conf/httpd.conf
-#COPY htdocs /usr/local/apache2/htdocs
+
 
 #FROM centos:latest
 #MAINTAINER valentin

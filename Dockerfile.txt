@@ -5,8 +5,9 @@ RUN apt-get install apache2-utils -y
 RUN apt-get clean 
 WORKDIR . /usr/sbin/
 EXPOSE 80 
-CMD [“apache2ctl”, “-D”, “FOREGROUND”]
-
+RUN 
+#CMD [“apache2ctl”, “-D”, “FOREGROUND”]
+ENTRYPOINT [“/usr/sbin/apache2”, “-D”, “FOREGROUND”]
 
 #FROM httpd:latest
 #COPY ./public-html/ /usr/local/apache2/htdocs/

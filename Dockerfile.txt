@@ -4,9 +4,13 @@ MAINTAINER NewstarCorporation
 
 RUN yum -y install httpd
 
+RUN mkdir -p /var/www/
+
 COPY index.html /var/www/html/
 
 CMD [“/usr/sbin/httpd”, “-D”, “FOREGROUND”]
 
-EXPOSE 80
+EXPOSE 8080
+
+
 

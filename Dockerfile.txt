@@ -1,12 +1,12 @@
 FROM httpd:latest
-#COPY ./public-html/ /usr/local/apache2/htdocs/
+COPY ./public-html/ /usr/local/apache2/htdocs/
 
 
 #FROM centos:latest
 #MAINTAINER valentin
 #RUN yum -y install httpd
 #RUN touch index.html
-COPY index.html /var/www/html/
+#COPY index.html /var/www/html/
 CMD [“/usr/sbin/httpd”, “-D”, “FOREGROUND”]
 
 EXPOSE 80

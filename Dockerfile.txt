@@ -1,6 +1,7 @@
 FROM httpd:latest
 #COPY ./public-html/ /usr/local/apache2/htdocs/
-COPY ./htmlapp/ /usr/local/apache/htdocs
+ADD ./httpd-custom.conf /usr/local/apache2/conf/httpd.conf
+COPY htdocs /usr/local/apache2/htdocs
 
 #FROM centos:latest
 #MAINTAINER valentin

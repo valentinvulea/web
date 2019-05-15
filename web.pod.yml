@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-web
+  namespace: pod-web
+spec:
+  containers:
+  - name: web-httpd
+    image: doublev20/web-apache:version1
+    ports:
+    - containerPort: 8080

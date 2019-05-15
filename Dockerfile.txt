@@ -6,8 +6,10 @@ RUN apt-get clean
 #WORKDIR . /usr/sbin/
 EXPOSE 80 
 RUN 
-CMD [“apache2”, “-D”, “FOREGROUND”]
+#CMD [“apache2”, “-D”, “FOREGROUND”]
 #ENTRYPOINT [“/usr/sbin/apache2”, “-D”, “FOREGROUND”]
+ENTRYPOINT [“/usr/sbin/apache2”]
+CMD ["-D"]
 
 #FROM httpd:latest
 #COPY ./public-html/ /usr/local/apache2/htdocs/
